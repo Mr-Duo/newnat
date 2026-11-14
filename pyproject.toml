@@ -1,14 +1,15 @@
 [project]
 name = "newnat"
-version = "0.1.0"
+version = "0.1.1"
 description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "Mr-Duo", email = "duongb102938@gmail.com" }
+    { name = "Mr-Duo", email = "dduong.cv.01@gmail.com" }
 ]
 requires-python = ">=3.14"
 dependencies = [
     "numpy>=2.5.4",
+    "pyyaml>=6.0.3",
     "tree-sitter>=0.26.0",
     "tree-sitter-go>=0.25.0",
     "tree-sitter-javascript>=0.25.0",

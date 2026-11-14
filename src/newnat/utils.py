@@ -114,6 +114,7 @@ def tree_walk(root_node: Node) -> Iterable[Node]:
         current_node = queue.popleft()
         yield current_node
         queue.extend(current_node.children)
+        
 # --------------------------------------------------------------------------
 # Utils
 # --------------------------------------------------------------------------

@@ -148,8 +148,8 @@ class BaseProcessor:
                     right_text += r
                     opr_text = found
                 else:
-                    print(opr_text.split(found))
-                    print(f"{"="*10}\nleft: {left_txt}\nopr: {opr_text}\nright: {right_text}")
+                    # print(opr_text.split(found))
+                    # print(f"{"="*10}\nleft: {left_txt}\nopr: {opr_text}\nright: {right_text}")
                     continue
             
             modified_bin_condition = self.parterns.get_reversed_operand((left_txt, opr_text, right_text))
@@ -196,7 +196,7 @@ class BaseProcessor:
                             else_child.extend(__el.type for __el in child.children)
                                  
                 # print(_alter)
-                print(children_types)
+                # print(children_types)
                 if any(node_type in children_types for node_type in _else) and \
                     all(node_type not in children_types for node_type in _alter) and \
                     all(node_type not in else_child for node_type in _alter):
@@ -234,8 +234,8 @@ class BaseProcessor:
                     right_text = r + right_text
                     opr_text = found
                 else:
-                    print(opr_text.split(found))
-                    print(f"{"="*10}\nleft: {left_txt}\nopr: {opr_text}\nright: {right_text}")
+                    # print(opr_text.split(found))
+                    # print(f"{"="*10}\nleft: {left_txt}\nopr: {opr_text}\nright: {right_text}")
                     continue
                 
             

@@ -1,0 +1,11 @@
+# Top-level keys act as defaults for every run
+# current transforms: block_swap, insert_dead_code, var_renaming, operand_swap, for_while_swap
+transform: [block_swap, insert_dead_code]
+continuous: true
+diff: true
+
+runs:
+  - file: samples/manifest.go
+  - file: [samples/_readers.py, samples/aggregate.js]   # a list of files is fine too
+    transform: insert_dead_code
+    continuous: false

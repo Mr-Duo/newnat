@@ -19,16 +19,14 @@ Usage:
 """
 from __future__ import annotations
 
-import argparse
 import hashlib
 import json
 import sys
 
 from pathlib import Path
 from typing import Iterator, Optional
-from collections import defaultdict
 
-from tree_sitter import Language, Node, Parser, Tree
+from tree_sitter import Node, Tree
 
 from newnat.utils import *
 from newnat.data_models import *
@@ -192,8 +190,8 @@ def main(path: Path, out_dir='.', meta_path="meta-data.json") \
     meta_path.parent.mkdir(parents=True, exist_ok=True)
     meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-    for fn, out in zip(funcs, written):
-        print(f"{out}  <-  [{fn.kind}] {fn.qualified_name} (lines {fn.start_line}-{fn.end_line})")
+    # for fn, out in zip(funcs, written):
+    #     print(f"{out}  <-  [{fn.kind}] {fn.qualified_name} (lines {fn.start_line}-{fn.end_line})")
     print(f"\n{len(written)} function(s) written to {out_dir}/", file=sys.stderr)
     print(f"metadata written to {meta_path}", file=sys.stderr)
 
